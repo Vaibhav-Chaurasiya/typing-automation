@@ -1,175 +1,221 @@
+
 # Keyanta – Typing Automation
 
-**Keyanta** is a lightweight and customizable typing automation tool for Windows, designed to make typing practice and text automation easier. It provides adjustable typing speed, pause and resume controls, floating mini mode, and a modern glassmorphism-inspired interface.
+**Keyanta** is a lightweight and customizable typing automation application for Windows, built with Python. It helps simplify typing practice and repetitive text-entry tasks through adjustable typing speed, pause and resume controls, floating mini mode, delay settings, and a modern interface.
 
-The application is designed for users who want more control over their typing workflow through a simple and customizable interface.
-
----
+Keyanta is designed to provide a simple and convenient typing experience with customizable controls and real-time progress tracking.
 
 ## Features
 
-* **Adjustable Typing Speed:** Customize the typing speed according to your requirements.
-* **Pause and Resume:** Pause the typing process and resume whenever needed.
-* **Floating Mini Mode:** Keep the application accessible in a compact floating window.
-* **Delay Control:** Configure delays to control the timing of typing operations.
-* **Opacity Control:** Adjust the transparency of the application window.
-* **Typing Progress:** Monitor typing progress and completed words.
-* **Local Mode:** Use the application in local mode.
-* **Modern UI:** Clean interface with a glassmorphism-inspired design.
-* **Lightweight:** Designed to provide a simple and convenient typing experience.
-
----
+- **Adjustable Typing Speed:** Customize typing speed according to your requirements.
+- **Pause and Resume:** Pause the typing process and resume whenever needed.
+- **Floating Mini Mode:** Keep Keyanta accessible in a compact floating window while working on other applications.
+- **Delay Control:** Configure delays before typing operations.
+- **Opacity Control:** Adjust application window transparency.
+- **Typing Progress:** Monitor typing progress and completed words.
+- **Typing Speed Indicator:** View the configured typing speed in words per minute (WPM).
+- **Local Mode:** Use the application in its local operating mode.
+- **Modern Interface:** Clean, compact, and glassmorphism-inspired user interface.
+- **Windows Executable:** Run the application using the prebuilt `Keyanta.exe` without manually launching the Python source code.
 
 ## Screenshots
 
-### Keyanta – Main Interface
+### Main Interface
 
-The main interface provides access to typing controls, speed adjustments, progress tracking, and mini mode.
+Keyanta provides a compact interface for managing typing speed, progress, opacity, delay, and typing controls.
 
 <!-- Add your application screenshot here -->
 
----
-
 ## System Requirements
 
-Before using Keyanta, make sure your system meets the following requirements:
+| Requirement | Details |
+|---|---|
+| Operating System | Microsoft Windows |
+| Architecture | Compatible Windows architecture |
+| Application | Keyanta.exe |
+| Internet Connection | Not necessarily required for local functionality |
+| Python | Required only when running from source |
+| Additional Dependencies | Included or managed according to the application build |
 
-| Requirement             | Details                                          |
-| ----------------------- | ------------------------------------------------ |
-| Operating System        | Windows                                          |
-| Architecture            | 64-bit or compatible Windows system              |
-| Internet Connection     | Not necessarily required for local functionality |
-| Additional Requirements | Depends on the application build                 |
+## Download and Installation
 
----
+### Option 1: Download Keyanta for Windows
 
-## Installation
+1. Open the [Keyanta Releases](https://github.com/Vaibhav-Chaurasiya/typing-automation/releases) page.
+2. Find the latest available release.
+3. Download the Windows executable or ZIP package attached to the release.
+4. If you downloaded a ZIP file, extract it.
+5. Locate `Keyanta.exe`.
+6. Double-click the executable to launch Keyanta.
 
-### Option 1: Download the Application
+**Note:** Download only the files published in the official repository's Releases section.
 
-1. Open the [Keyanta GitHub Repository](https://github.com/Vaibhav-Chaurasiya/typing-automation).
-2. Navigate to the repository's Releases section, if a release is available.
-3. Download the Windows application package.
-4. Extract the downloaded ZIP file, if applicable.
-5. Run the application using the provided executable.
+### Option 2: Run from Source Code
 
-**Note:** A prebuilt executable or official release must be published before this installation method is available.
+You can also run Keyanta directly from its Python source code.
 
-### Option 2: Clone the Repository
-
-Clone the repository to your local machine:
+#### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/Vaibhav-Chaurasiya/typing-automation.git
 ```
 
-Navigate to the project directory:
+#### Step 2: Navigate to the Project Directory
 
 ```bash
 cd typing-automation
 ```
 
-Open the project in your preferred code editor and follow the setup instructions for the application's implementation.
+#### Step 3: Install Dependencies
 
----
+Make sure Python is installed on your Windows computer.
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+#### Step 4: Launch the Application
+
+```bash
+python main.py
+```
+
+**Note:** Run these commands from the directory containing `main.py` and `requirements.txt`. If dependencies are missing, install the packages specified in the requirements file.
 
 ## How to Use
 
 ### 1. Launch Keyanta
 
-Start the application on your Windows computer.
+Open `Keyanta.exe` or launch the application from its Python source code.
 
 ### 2. Configure Typing Speed
 
-Adjust the typing speed according to your preference using the available speed controls.
+Adjust the typing speed using the available WPM control.
 
 ### 3. Set the Delay
 
-Use the delay control to configure the timing between typing operations.
+Use the Delay control to configure the timing before typing operations.
 
-### 4. Use Mini Mode
-
-Enable mini mode to keep the application in a compact floating window while working on other tasks.
-
-### 5. Adjust Opacity
-
-Use the opacity control to customize the transparency of the application window.
-
-### 6. Start Typing
+### 4. Start Typing
 
 Click the Start button to begin the typing process.
 
-### 7. Pause or Resume
+### 5. Pause or Resume
 
-Use the available pause and resume controls to manage the typing process whenever required.
+Use the available controls to pause and resume typing as needed.
+
+### 6. Use Mini Mode
+
+Enable Mini mode to keep Keyanta accessible in a compact floating window.
+
+### 7. Adjust Opacity
+
+Customize the application's transparency using the opacity control.
 
 ### 8. Monitor Progress
 
-Track your typing speed, completed words, and overall progress through the application's dashboard.
-
----
+Track typing speed, completed words, and overall typing progress through the application interface.
 
 ## Project Structure
 
-The repository currently contains the following files:
+The project contains the Python application source code, build configuration, and Windows executable.
 
 ```text
 typing-automation/
+│
+├── app/
+│   ├── engine.py
+│   └── ui.py
+│
+├── build/
+│   └── Keyanta/
+│
+├── dist/
+│   └── Keyanta.exe
+│
+├── web/
+│   ├── .gitattributes
+│   ├── Keyanta.spec
+│   ├── LICENSE
+│   ├── main.py
+│   └── requirements.txt
 │
 ├── .gitattributes
 ├── LICENSE
 └── README.md
 ```
 
-Additional application files, source code, configuration files, and build resources can be added as the project develops.
-
----
+**Note:** The build directory contains generated build resources. The `dist` directory contains the packaged Windows executable.
 
 ## Technology Stack
 
-Keyanta is a Windows-focused typing automation project.
+| Technology | Purpose |
+|---|---|
+| Python | Application development |
+| PyInstaller | Packaging Python application into a Windows executable |
+| Tkinter / UI Libraries | Desktop interface, depending on the implementation |
+| Windows | Target operating system |
 
-The specific programming language, libraries, and frameworks depend on the implementation of the application.
+The exact dependencies are listed in `requirements.txt`.
 
----
+## Building the Executable
+
+To create a Windows executable from the source code, install the required dependencies and PyInstaller.
+
+```bash
+python -m pip install -r requirements.txt
+python -m pip install pyinstaller
+```
+
+Build the application using the provided PyInstaller specification:
+
+```bash
+python -m PyInstaller Keyanta.spec
+```
+
+Alternatively, if building directly from `main.py`:
+
+```bash
+python -m PyInstaller --onefile --windowed --name Keyanta main.py
+```
+
+The generated executable is typically placed in the `dist` directory.
+
+**Important:** The specification file and build configuration should be used from their correct project directory.
 
 ## Use Cases
 
 Keyanta can be useful for:
 
-* Typing practice and workflow testing.
-* Repetitive text-entry tasks.
-* Testing typing speed and timing configurations.
-* Managing typing automation through a compact interface.
-* Experimenting with desktop automation workflows.
+- Typing practice and speed testing.
+- Repetitive text-entry tasks.
+- Testing typing speed and timing configurations.
+- Managing typing automation through a compact desktop interface.
+- Desktop application workflow testing.
 
----
+## Privacy and Responsible Use
 
-## Privacy
+Keyanta is intended to provide local typing automation functionality.
 
-Keyanta is designed with local usage in mind.
-
-Refer to the application's actual implementation and configuration to determine what information, if any, is collected, stored, or transmitted.
-
-Do not enter sensitive or confidential information into automated typing workflows unless you understand how the application handles that data.
-
----
+- Review the application behavior before using it with sensitive information.
+- Avoid automating confidential information into third-party applications.
+- Use typing automation only in applications where you have permission to do so.
+- Check the source code to understand how the application handles data and input.
 
 ## Contributing
 
 Contributions, suggestions, and improvements are welcome.
 
-If you would like to contribute:
+To contribute:
 
 1. Fork this repository.
-2. Create a new branch for your changes.
-3. Make your changes and test them.
-4. Commit your changes with a descriptive message.
-5. Open a Pull Request describing your contribution.
+2. Create a new branch.
+3. Make your changes.
+4. Test your changes.
+5. Commit your changes with a descriptive message.
+6. Open a Pull Request describing your contribution.
 
-For major changes, consider opening an issue first to discuss the proposed improvement.
-
----
+For major changes, consider opening an issue before starting development.
 
 ## Issues and Feature Requests
 
@@ -177,32 +223,28 @@ If you encounter a bug or have an idea for a new feature, please open an issue i
 
 When reporting a bug, include:
 
-* A clear description of the problem.
-* Steps to reproduce the issue.
-* Your Windows version.
-* Relevant screenshots or error messages.
-
----
+- A clear description of the issue.
+- Steps to reproduce the problem.
+- Your Windows version.
+- Relevant screenshots or error messages.
+- Any additional information that may help reproduce the issue.
 
 ## Roadmap
 
-Potential improvements for future versions include:
+Potential improvements for future versions:
 
-* [ ] Publish downloadable Windows releases.
-* [ ] Add detailed installation and setup instructions.
-* [ ] Improve typing statistics and progress tracking.
-* [ ] Add additional customization options.
-* [ ] Expand documentation and usage examples.
-
----
+- [ ] Improve typing statistics and progress tracking.
+- [ ] Add additional customization options.
+- [ ] Improve the user interface and accessibility.
+- [ ] Expand documentation and usage examples.
+- [ ] Continue improving Windows application packaging.
+- [ ] Add new features based on user feedback.
 
 ## License
 
-This project is distributed under the license specified in the [LICENSE](LICENSE) file.
+This project is distributed under the terms of the [Apache License 2.0](LICENSE).
 
 Please review the license before using, modifying, or distributing the project.
-
----
 
 ## Author
 
@@ -210,11 +252,13 @@ Please review the license before using, modifying, or distributing the project.
 
 GitHub: [@Vaibhav-Chaurasiya](https://github.com/Vaibhav-Chaurasiya)
 
----
+## Repository
 
-## Acknowledgements
+[Keyanta – Typing Automation](https://github.com/Vaibhav-Chaurasiya/typing-automation)
 
-Thank you to everyone who supports, tests, and contributes to the development of Keyanta.
+## Releases
+
+Download available application versions from the [GitHub Releases](https://github.com/Vaibhav-Chaurasiya/typing-automation/releases) page.
 
 ---
 
